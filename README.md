@@ -11,6 +11,12 @@ A stress test program over multiple GPUs of cross-vendor
 * [Open Hardware Monitor](https://github.com/openhardwaremonitor)
 * [Cloo](https://github.com/clSharp/Cloo)
 
+### Screenshot
+
+![burngpuburn](https://user-images.githubusercontent.com/1368591/100224389-1de75d80-2f60-11eb-93c6-26e696f5cda0.png)
+
+Enable checkbox per device to perform stress test
+
 ### Disclaimer
 
 **<span style="color:red">This software isn't responsible for any damage. Above all, please make sure your Power Supply Unit can supply sufficient power to your system</span>**
