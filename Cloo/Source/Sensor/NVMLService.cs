@@ -27,6 +27,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using OpenHardwareMonitor.Hardware;
@@ -45,7 +46,10 @@ namespace Cloo.Sensor
         private static string GetLibraryName()
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                return System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "NVIDIA Corporation", "NVSMI", "nvml");
+            {
+                string nvsmiPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "NVIDIA Corporation", "NVSMI"); // some old drivers contain "nvml" library in their nvsmi path
+                return Directory.Exists(nvsmiPath) ? Path.Combine(nvsmiPath, "nvml") : "nvml"; // the latest one gets its place back to windows\\system32
+            }
             return "libnvidia-ml";
         }
 
