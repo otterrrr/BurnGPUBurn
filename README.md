@@ -6,6 +6,10 @@ A stress test program over multiple GPUs of cross-vendor
 
 [gpu-burn](https://github.com/wilicc/gpu-burn) is the existing stress test program to see MFLOPS, temperature and power-consumption but this is working only on NVIDIA GPUs. In this manner, BurnGPUBurn looks an extention of gpu-burn considering cross-vendor GPUs like a combination of AMD+NVIDIA or Intel+AMD
 
+### Download
+
+[master/dist/BurnGPUBurn.zip](https://github.com/otterrrr/BurnGPUBurn/raw/master/dist/BurnGPUBurn.zip)
+
 ### Open source dependency
 
 * [Open Hardware Monitor](https://github.com/openhardwaremonitor)
